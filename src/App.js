@@ -13,7 +13,6 @@ function Randomcat(props) {
                  img.height=props.alto;
        }); 
     }
-}
 
 function Catlist() {
   return (
