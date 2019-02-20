@@ -1,27 +1,22 @@
 import React, { Component } from 'react';
 
 function Welcome(props) {
-  return <h1>Hello, {props.name},{props.ancho}</h1>;
+  console.log(props);
+  console.log(props.name);
+  return <h1>Hello, {props.ancho},{props.alto}</h1>;
 }
 
 function Greet() {
   return (
     <div>
-      <Welcome name="Sara" ancho="200" alto="200" />
-      <Welcome name="tamara" />
-      <Welcome name="Edite" ancho=""  alto />
+      <Welcome ancho="200" alto="200" />
+      <Welcome ancho="200" alto="200"  />
+      <Welcome />
     </div>
   );
 }
 
 class App extends Component {
-
- state = {
-      users: [
-        {id: 1, name: "miguel", email: "test@miguelgomez.io"},
-        {id: 2, name: "test", email: "test@test.es"}
-      ]
-    };
 
   render() {
     return (
@@ -30,10 +25,6 @@ class App extends Component {
   }
 }
 
-App.defaultProps = {
-  ancho: "200",
-  alto: "200" 
-};
 
 export default App;
 
