@@ -24,6 +24,11 @@ class App extends Component {
     );
   }
 }
+      
+ Welcome.defaultProps = {
+  ancho: "200",
+  alto: "200"
+}
 
 
 export default App;
