@@ -1,17 +1,26 @@
 import React, { Component } from 'react';
+var dogurl='https://dog.ceo/api/breed/chihuahua/images/random';
 
-function Welcome(props) {
-  console.log(props);
-  console.log(props.ancho);
-  return <h1>Hello, {props.ancho},{props.alto}</h1>;
+function Randomcat(props) {
+
+               return fetch(dogurl)
+                .then(function(imageResponse){
+                  return imageResponse.json();   })
+                   .then(function(imageJSON){
+                    var img = document.getElementById(props.id);
+                     img.src = imageJSON.message;
+                 img.width=props.ancho;
+                 img.height=props.alto;
+       }); 
+    }
 }
 
-function Greet() {
+function Catlist() {
   return (
     <div>
-      <Welcome ancho="200" alto="200" />
-      <Welcome ancho="200" alto="200"  />
-      <Welcome />
+      <Randomcat id="1" ancho="200" alto="200" />
+      <Randomcat id="2" ancho="200" alto="400"  />
+      <Randomcat id="2" />
     </div>
   );
 }
@@ -20,7 +29,10 @@ class App extends Component {
 
   render() {
     return (
-      <Greet />
+    <img id="image1"></img>
+    <img id="image2"></img>
+    <img id="image3"></img>
+      <Catlist />
     );
   }
 }
