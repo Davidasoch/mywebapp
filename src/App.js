@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 function Welcome(props) {
   console.log(props);
-  console.log(props.name);
+  console.log(props.ancho);
   return <h1>Hello, {props.ancho},{props.alto}</h1>;
 }
 
