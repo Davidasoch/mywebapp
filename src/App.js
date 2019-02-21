@@ -34,7 +34,6 @@ class App extends Component {
       <Catlist />
     );
   }
-}
       
  Welcome.defaultProps = {
   ancho: "200",
