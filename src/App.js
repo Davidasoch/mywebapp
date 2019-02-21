@@ -28,10 +28,12 @@ class App extends Component {
 
   render() {
     return (
+      <div>
     <img id="image1"></img>
     <img id="image2"></img>
     <img id="image3"></img>
       <Catlist />
+      </div>
     );
   }
       
