@@ -9,7 +9,7 @@ const routing = (
   <Router>
     <div>
       <Route exact  path="/" component={Hello} />
-      <Route path="/hello" component={App} />
+      <Route path="/cats" component={App} />
     </div>
   </Router>
 );
