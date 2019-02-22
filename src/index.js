@@ -4,12 +4,16 @@ import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import Hello from './hello';
+import Itemapp from './item';
+import Positionapp from './position';
 import * as serviceWorker from './serviceWorker';
 const routing = (
   <Router>
     <div>
       <Route exact  path="/" component={Hello} />
       <Route path="/cats" component={App} />
+      <Route path="/item" component={Itemapp} />
+      <Route path="/position" component={Positionapp} />
     </div>
   </Router>
 );
